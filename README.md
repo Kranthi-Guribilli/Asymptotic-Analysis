@@ -27,6 +27,17 @@ If n=10, 3(10) + 3=33</br>
 If n=10k, 3(10k)+3= 30,003</br>
 if n=1M, 3(1M)+3=3,000,003</br>
 As the input size n grows bigger and bigger, then the expression 3n + 3 is closer and closer to 3n. Dropping terms might look like a stretch at first, but you will see that what matters the most is the higher-order terms of the function rather than lesser terms and constants.</br>
+If n is the size of the input then f(n) is a function of n denotes the  time complexity. In other words, f(n) is nothing nut a no.of instructions executed for the input value n.</br>
+Then how to find f(n)?</br>
+1. we can compare two data structures for a particular operation by comparing their f(n) values.
+2. we are interested in growth rate of f(n) with respect to n because it might be possible that for smaller size it might be look a data structure is better than other but for larger it may not!
+3. This concept is applicable in comparing two algorithms as well.
 Another example:
+<img src="https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/blob/main/readme.png">
+In the above example we can clearly observe that the growth rate of 5n^2 is increasing while 6n and the constant 12 are decreasing. And the most of the time is consumed at 5n^2.
+And lets say if we consider the value of n as 1 then we can simply say that 12 is taking most of the time. But the reality is different when we are increasing the value of n we can clearly observe that which term is taking the most of the time. Now let's have a look at visualisation of growth rate.
+
+
+
 
 
