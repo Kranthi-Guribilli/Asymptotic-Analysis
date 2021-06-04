@@ -11,4 +11,22 @@ So, here comes the question How to calculate the TIME COMPLEXITY?</br>
 ### Calculating Time Complexity :</br>
 In computer science, time complexity describes the number of operations a program will execute for the given size of input n.</br>
 How do you get a function that gives you the rough number of operations that a CPU will execute?</br>
-One idea is to analyze your code line by line and mind code inside loops. Let’s do an example to explain this point. For instance, we have a function to find the
+One idea is to analyze your code line by line and mind code inside loops. Let’s do an example to explain this point. For instance, we have a function to find the minimum value on an array called getMin.
+<img src="https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/book/images/image4.png">
+By translating lines of code to an approximate number of operations</br>
+Assuming that each line of code is an operation, we get the following:</br>
+3n + 3, 
+n = input size.</br>
+That means that if you have an array of 3 elements, e.g. getMin([1, 2, 3]), then it will execute around 3(3)+3 = 12 operations. Of course, this is not for every case. For instance, Line 12 is only executed if the condition on line 11 is met. As you might learn in the next section, we want to get the big picture and get rid of smaller terms to compare algorithms easier.i.e., we used to calculate for worst cases....</br>
+## Simplifying Time Complexity with Asymptotic Analysis
+When we compare algorithms, about the growth rate when the input gets huge (towards infinity). Then you have a function like 20*n^3 + 100. If n is one million. The term + 100 makes a tiny contribution to the result (less than 0.000001%). Here is when the asymptotic analysis comes to the rescue.</br>
+Note: Asymptotic analysis describes the behavior of functions as their inputs approach to infinity</br>
+
+Operations performed by an algorithm with a time complexity of 3n + 3</br>
+If n=10, 3(10) + 3=33</br>
+If n=10k, 3(10k)+3= 30,003</br>
+if n=1M, 3(1M)+3=3,000,003</br>
+As the input size n grows bigger and bigger, then the expression 3n + 3 is closer and closer to 3n. Dropping terms might look like a stretch at first, but you will see that what matters the most is the higher-order terms of the function rather than lesser terms and constants.</br>
+Another example:
+
+
