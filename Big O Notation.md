@@ -20,6 +20,8 @@ Let us know more about hese eight time complexities<br>
 Represented as O(1), it means that regardless of input size , the number of executions is always the same.<br>
 Let's see an example<br>
 <b>Example: Finding if an array is empty or not.<br>
+[Let's implement a function that checks whether the given array is empty or not](https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/blob/main/IsArrEmpty.c)<br>
+ 
  
 
  
