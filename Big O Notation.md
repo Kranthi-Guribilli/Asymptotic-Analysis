@@ -43,6 +43,7 @@ Let’s say that we want to find duplicate elements in an array. What’s the fi
 As we learned before, the big O cares about the worst-case scenario, where we would have to visit every element on the array. So, we have an O(n) runtime.
 ## 4. Linearithmic
 You can represent linearithmic algorithms as O(n log n). This one is important because it is the best runtime for sorting! Let’s see the merge-sort.<br>
-<b>Sorting elements in an Array
-
- 
+<b>Sorting elements in an Array</b>
+1. If the array only has two elements, we can sort them manually.
+2. We divide the array into two halves.
+3. Merge the two parts recursively with the merge function explained below
