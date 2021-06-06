@@ -1,3 +1,5 @@
+
+[triplets.txt](https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/files/6603751/triplets.txt)
 # Comparing algorithms using Big O Notation
 ## Big O Examples
 There are many kinds of algorithms. Most of them fall into one of the eight time complexities that will explore in this chapter.<br>
@@ -76,4 +78,5 @@ Let’s say you want to find a duplicated middle name in a phone directory book 
  Cubic O(n^3) and higher polynomial functions usually involve many nested loops. An example of a cubic algorithm is a multi-variable equation solver (using brute force) or finding three elements on an array that add up to a given number.<br>
  <b>3 SUM</b><br>
  Let’s say you want to find 3 items in an array that add up to a target number. One brute force solution would be to visit every possible combination of 3 elements and add them to see if they are equal to the target.<br>
+
  
