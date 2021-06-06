@@ -103,5 +103,98 @@ bool find3Numbers(int A[], int arr_size, int sum)
     return false;
 }
 ```
- 
- 
+As you can see, three nested loops usually translate to O(n^3).
+## 7. Exponential
+Exponential runtimes, O(2^n), means that every time the input grows by one, the number of operations doubles. Exponential programs are only usable for a tiny number of elements (<100); otherwise, it might not finish in your lifetime. 💀<br>
+Let’s do an example.<br>
+
+Finding subsets of a set<br>
+Finding all distinct subsets of a given set can be implemented as follows:<br>
+#Subsets in a set
+```cpp
+// CPP program to find all subsets by backtracking.
+#include <bits/stdc++.h>
+using namespace std;
+  
+// In the array A at every step we have two
+// choices for each element either  we can
+// ignore the element or we can include the
+// element in our subset
+void subsetsUtil(vector<int>& A, vector<vector<int> >& res,
+                 vector<int>& subset, int index)
+{
+    res.push_back(subset);
+    for (int i = index; i < A.size(); i++) {
+  
+        // include the A[i] in subset.
+        subset.push_back(A[i]);
+  
+        // move onto the next element.
+        subsetsUtil(A, res, subset, i + 1);
+  
+        // exclude the A[i] from subset and triggers
+        // backtracking.
+        subset.pop_back();
+    }
+  
+    return;
+}
+  
+// below function returns the subsets of vector A.
+vector<vector<int> > subsets(vector<int>& A)
+{
+    vector<int> subset;
+    vector<vector<int> > res;
+  
+    // keeps track of current element in vector A;
+    int index = 0;
+    subsetsUtil(A, res, subset, index);
+  
+    return res;
+}
+  
+// Driver Code.
+int main()
+{
+    // find the subsets of below vector.
+    vector<int> array = { 1, 2, 3 };
+  
+    // res will store all subsets.
+    // O(2 ^ (number of elements inside array))
+    // because at every step we have two choices
+    // either include or ignore.
+    vector<vector<int> > res = subsets(array);
+  
+    // Print result
+    for (int i = 0; i < res.size(); i++) {
+        for (int j = 0; j < res[i].size(); j++)
+            cout << res[i][j] << " ";
+        cout << endl;
+    }
+  
+    return 0;
+}
+```
+1. Base case is empty element.
+2. For each element from the input, append it to the results array.
+3. The new results array will be what it was before + the duplicated with the appended element.
+Every time the input grows by one, the resulting array doubles. That’s why it has an O(2n).
+## 8. Factorial
+The factorial runtime, O(n!), is not scalable at all. Even with input sizes of ~10 elements, it will take a couple of seconds to compute. It’s that slow! 🍯🐝<br>
+Factorial: 
+A factorial is the multiplication of all the numbers less than itself down to 1.<br>
+<b>Getting all permutations of a word</b><br>
+One classic example of an O(n!) algorithm is finding all the different words formed with a given set of letters.<br>
+This is probably the most trivial example of a function that runs in O(n!) time (where n is the argument to the function):<br>
+```cpp
+void nFacRuntimeFunc(int n) {
+  for(int i=0; i<n; i++) {
+    nFacRuntimeFunc(n-1);
+  }
+}
+```
+As you can see in the getPermutations function, the resulting array is the factorial of the word length.<br>
+
+Factorial starts very slow and quickly becomes unmanageable. A word size of just 11 characters would take a couple of hours in most computers! 🤯
+# Summary:
+We went through 8 of the most common time complexities and provided examples for each of them. Hopefully, this will give you a toolbox to analyze algorithms.
