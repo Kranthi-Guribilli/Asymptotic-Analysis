@@ -1,5 +1,3 @@
-
-[triplets.txt](https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/files/6603751/triplets.txt)
 # Comparing algorithms using Big O Notation
 ## Big O Examples
 There are many kinds of algorithms. Most of them fall into one of the eight time complexities that will explore in this chapter.<br>
@@ -58,25 +56,52 @@ Quadratic running times, O(n^2), are the ones to watch out for. They usually don
 Usually, they have double-nested loops, where each one visits all or most elements in the input. One example of this is a naïve implementation to find duplicate words on an array.<br>
 <b>Finding duplicates in an array (naïve approach)</b><br>
 If you remember, we have solved this problem more efficiently in the Linear section. We solved this problem before using an O(n), let’s solve it this time with an O(n^2):
-
-class Solution {<br>
-public:<br>
-    bool containsDuplicate(vector<int>& nums) {<br>
-        for (int i = 1; i < nums.size(); ++ i) {<br>
-            for (int j = 0; j < i; ++ j) {<br>
-                if (nums[i] == nums[j]) {<br>
-                    return true;<br>
-                }<br>
-            }<br>
-        }<br>
-        return false;<br>
-    }<br>
-};<br>
+```cpp
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        for (int i = 1; i < nums.size(); ++ i) {
+            for (int j = 0; j < i; ++ j) {
+                if (nums[i] == nums[j]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+};
+```
  As you can see, we have two nested loops causing the running time to be quadratic. How much difference is there between a linear vs. quadratic algorithm?<br>
 Let’s say you want to find a duplicated middle name in a phone directory book of a city of ~1 million people. If you use this quadratic solution, you would have to wait for ~12 days to get an answer 🐢; while if you use the linear solution, you will get the answer in seconds! 🚀<br>
  ## 6. Cubic
  Cubic O(n^3) and higher polynomial functions usually involve many nested loops. An example of a cubic algorithm is a multi-variable equation solver (using brute force) or finding three elements on an array that add up to a given number.<br>
  <b>3 SUM</b><br>
  Let’s say you want to find 3 items in an array that add up to a target number. One brute force solution would be to visit every possible combination of 3 elements and add them to see if they are equal to the target.<br>
-
+```c
+bool find3Numbers(int A[], int arr_size, int sum)
+{
+    int l, r;
+ 
+    // Fix the first element as A[i]
+    for (int i = 0; i < arr_size - 2; i++) {
+ 
+        // Fix the second element as A[j]
+        for (int j = i + 1; j < arr_size - 1; j++) {
+ 
+            // Now look for the third number
+            for (int k = j + 1; k < arr_size; k++) {
+                if (A[i] + A[j] + A[k] == sum) {
+                    printf("Triplet is %d, %d, %d",
+                           A[i], A[j], A[k]);
+                    return true;
+                }
+            }
+        }
+    }
+ 
+    // If we reach here, then no triplet was found
+    return false;
+}
+```
+ 
  
