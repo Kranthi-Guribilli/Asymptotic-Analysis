@@ -28,7 +28,7 @@ As you can see in both examples (array and linked list), if the input is a colle
 <b>Searching on a sorted array</b><br>
 The binary search only works for sorted arrays. It starts searching for the element in the middle of the array, and then it moves to the right or left depending on if the value you are looking for is larger or smalller.<br>
 [Binary search](https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/blob/main/Binary%20Search.c)<br>
-<img src="https://www.geeksforgeeks.org/wp-content/uploads/Binary-Search.png">
+<img src="https://www.geeksforgeeks.org/wp-content/uploads/Binary-Search.png"><br>
 This binary search implementation is a recursive algorithm, which means that the function binarySearchRecursive calls itself multiple times until the program finds a solution. The binary search splits the array in half every time.
  Since the binarySearch divides the input in half each time. As a rule of thumb, when you have an algorithm that divides the data in half on each call, you are most likely in front of a logarithmic runtime: O(log n).
 ## 3. Linear
@@ -47,3 +47,33 @@ You can represent linearithmic algorithms as O(n log n). This one is important b
 1. If the array only has two elements, we can sort them manually.
 2. We divide the array into two halves.
 3. Merge the two parts recursively with the merge function explained below
+[MergeSort.c]("https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/blob/main/MergeSort.c")<br>
+The merge function combines two sorted arrays in ascending order. Let’s say that we want to sort the array [9, 2, 5, 1, 7, 6]. In the following illustration, you can see what each function does.<br>
+<img src="https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/book/images/image11.png"><br>
+How do we obtain the running time of the merge sort algorithm? The merge-sort divides the array in half each time in the split phase, log n, and the merge function join each splits, n. The total work is O(n log n). There are more formal ways to reach this runtime, like using the Master Method and recursion trees.
+## 5. Quadratic
+Quadratic running times, O(n^2), are the ones to watch out for. They usually don’t scale well when they have a large amount of data to process.<br>
+Usually, they have double-nested loops, where each one visits all or most elements in the input. One example of this is a naïve implementation to find duplicate words on an array.<br>
+<b>Finding duplicates in an array (naïve approach)</b><br>
+If you remember, we have solved this problem more efficiently in the Linear section. We solved this problem before using an O(n), let’s solve it this time with an O(n^2):
+
+class Solution {<br>
+public:<br>
+    bool containsDuplicate(vector<int>& nums) {<br>
+        for (int i = 1; i < nums.size(); ++ i) {<br>
+            for (int j = 0; j < i; ++ j) {<br>
+                if (nums[i] == nums[j]) {<br>
+                    return true;<br>
+                }<br>
+            }<br>
+        }<br>
+        return false;<br>
+    }<br>
+};<br>
+ As you can see, we have two nested loops causing the running time to be quadratic. How much difference is there between a linear vs. quadratic algorithm?<br>
+Let’s say you want to find a duplicated middle name in a phone directory book of a city of ~1 million people. If you use this quadratic solution, you would have to wait for ~12 days to get an answer 🐢; while if you use the linear solution, you will get the answer in seconds! 🚀<br>
+ ## 6. Cubic
+ Cubic O(n^3) and higher polynomial functions usually involve many nested loops. An example of a cubic algorithm is a multi-variable equation solver (using brute force) or finding three elements on an array that add up to a given number.<br>
+ <b>3 SUM</b><br>
+ Let’s say you want to find 3 items in an array that add up to a target number. One brute force solution would be to visit every possible combination of 3 elements and add them to see if they are equal to the target.<br>
+ 
