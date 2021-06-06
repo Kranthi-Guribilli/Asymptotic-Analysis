@@ -16,10 +16,14 @@ And here is a plot with all of them
 Figure 1. CPU operations vs. Algorithm runtime as the input size grows
 As you can see, O(1) and O(log n) is very scalable. However, O(n2) and worst can convert your CPU into a furnace 🔥 for massive inputs.
 Let us know more about hese eight time complexities<br>
-<b>1.Constant</b><br>
+<b>1. Constant</b><br>
 Represented as O(1), it means that regardless of input size , the number of executions is always the same.<br>
 Let's see an example<br>
 <b>Example: Finding if an array is empty or not.<br>
 [Let's implement a function that checks whether the given array is empty or not](https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/blob/main/IsArrEmpty.c)<br>
-Another example is [adding an element to the begining of a linked list]()<br>
+Another example is [adding an element to the begining of a linked list](https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/blob/main/addAtfirst.c)<br>
+As you can see in both examples (array and linked list), if the input is a collection of 10 elements or 10M, it would take the same amount of time to execute. You can’t get any more performant than this!<br>
+ <b>2. Logarthmic</b><br>
+ Represented in Big O notation as O(log n). When an algorithm has this running time, it means that as the input size grows, the number of operations grows very slowly. Logarithmic algorithms are very scalable and one such example is binary search.
+ 
  
