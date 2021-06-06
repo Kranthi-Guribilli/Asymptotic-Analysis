@@ -21,7 +21,5 @@ Represented as O(1), it means that regardless of input size , the number of exec
 Let's see an example<br>
 <b>Example: Finding if an array is empty or not.<br>
 [Let's implement a function that checks whether the given array is empty or not](https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/blob/main/IsArrEmpty.c)<br>
- 
- 
-
+Another example is [adding an element to the begining of a linked list]()<br>
  
