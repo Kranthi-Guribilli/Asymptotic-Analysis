@@ -14,8 +14,8 @@ Eight running time complexities you should know<br>
 And here is a plot with all of them
 <img src="https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/blob/main/GraphOfTimeComplexities.png"><br>
 Figure 1. CPU operations vs. Algorithm runtime as the input size grows
-As you can see, O(1) and O(log n) is very scalable. However, O(n2) and worst can convert your CPU into a furnace 🔥 for massive inputs.
-Let us know more about hese eight time complexities<br>
+As you can see, O(1) and O(log n) is very scalable. However, O(n^2) and worst can convert your CPU into a furnace 🔥 for massive inputs.
+Let us know more about these eight time complexities<br>
 ## 1. Constant</b><br>
 Represented as O(1), it means that regardless of input size , the number of executions is always the same.<br>
 Let's see an example<br>
