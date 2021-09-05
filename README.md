@@ -4,9 +4,9 @@ Every coder probably want to write better and faster code.
 How can we do that? Can we time how long it takes to run a program? Of course, you can!</br>
 However, if we run the same program on a computer, cellphone, or even a smartwatch, it will take different times.
 
-Wouldn’t it be great if we can compare algorithms regardless of the hardware where we run them? That’s what time complexity is for! But, why stop with the running time?</br>
-Here comes the BIG(O) Notation..</br>
-So, here comes the question How to calculate the TIME COMPLEXITY?<br>
+Wouldn’t it be great if we can compare algorithms regardless of the hardware where we run them? That’s what time complexity is for! But, why stop with the running time?
+Here comes the [BIG(O) Notation](https://github.com/Kranthi-Guribilli/Asymptotic-Analysis/blob/main/Big%20O%20Notation.md).</br>
+So,How to calculate the TIME COMPLEXITY?<br>
 <b>Calculating Time Complexity :</b></br>
 In computer science, time complexity describes the number of operations a program will execute for the given size of input n.</br>
 How do you get a function that gives you the rough number of operations that a CPU will execute?</br>
